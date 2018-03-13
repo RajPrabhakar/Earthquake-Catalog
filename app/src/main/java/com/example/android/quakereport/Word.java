@@ -6,15 +6,18 @@ package com.example.android.quakereport;
 
 public class Word {
 
-    private String qMagnitude, qLocation, qDate;
+    private String qLocation, qUrl;
+    private long qMilliSeconds;
+    private double qMagnitude;
 
-    public Word(String magnitude, String location, String date) {
+    public Word(double magnitude, String location, long milliseconds, String url) {
         qMagnitude = magnitude;
         qLocation = location;
-        qDate = date;
+        qMilliSeconds = milliseconds;
+        qUrl = url;
     }
 
-    public String getqMagnitude() {
+    public double getqMagnitude() {
         return qMagnitude;
     }
 
@@ -22,8 +25,12 @@ public class Word {
         return qLocation;
     }
 
-    public String getqDate() {
-        return qDate;
+    public long getqMilliSeconds() {
+        return qMilliSeconds;
+    }
+
+    public String getqUrl() {
+        return qUrl;
     }
 
 }
